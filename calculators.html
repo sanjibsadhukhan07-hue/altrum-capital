@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Calculators — Altrum Capital</title>
+<meta name="description" content="Free financial calculators from Altrum Capital: SIP, Step-Up SIP, Lumpsum, EMI, FD, RD, PPF, CAGR, Retirement Corpus, Goal SIP, Simple/Compound Interest, and Inflation Impact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/logo-icon.png">
+</head>
+<body>
+
+<div class="ledger-bg" aria-hidden="true"></div>
+
+<header id="siteHeader">
+  <nav class="wrap">
+      <a href="index.html" class="logo logo-full" aria-label="Altrum Capital — Adding Futures to Your Investments"><img src="images/logo-full.png" alt="Altrum Capital"></a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="why-us.html">Why Us</a>
+      <a href="calculators.html" class="active">Calculators</a>
+      <div class="nav-item has-mega">
+        <a href="amcs.html" aria-haspopup="true" aria-expanded="false">AMCs <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></a>
+        <div class="mega" data-amc-menu></div>
+      </div>
+      <a href="process.html">How We Work</a>
+      <a href="testimonials.html">Clients</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="login-menu">
+        <button type="button" class="login-btn" aria-haspopup="true" aria-expanded="false">Login <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></button>
+        <div class="login-pop" role="menu">
+          <div class="login-group">
+            <h6>Office Login</h6>
+            <a role="menuitem" href="https://altrumcapital.investwell.app/app/#/login" target="_blank" rel="noopener">Admin</a>
+            <a role="menuitem" href="https://www.nseinvest.com/nsemfdesk/login.htm" target="_blank" rel="noopener">NSE MF</a>
+            <a role="menuitem" href="https://voltmoney.in/partner/signup" target="_blank" rel="noopener">LAMF</a>
+          </div>
+          <div class="login-group">
+            <h6>Client Login</h6>
+            <a role="menuitem" href="https://altrumcapital.investwell.app/app/#/login" target="_blank" rel="noopener">MF Portfolio</a>
+            <a role="menuitem" href="https://app.voltmoney.in/" target="_blank" rel="noopener">LAMF</a>
+          </div>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-sm">Book a Consultation</a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="menu-close-scrim" id="scrim"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="services.html">Services</a>
+  <a href="why-us.html">Why Us</a>
+  <a href="calculators.html">Calculators</a>
+  <a href="amcs.html">AMCs</a>
+  <a href="process.html">How We Work</a>
+  <a href="testimonials.html">Clients</a>
+  <a href="contact.html">Contact</a>
+  <div class="m-login">
+    <h6>Office Login</h6>
+    <a href="https://altrumcapital.investwell.app/app/#/login" target="_blank" rel="noopener">Admin</a>
+    <a href="https://www.nseinvest.com/nsemfdesk/login.htm" target="_blank" rel="noopener">NSE MF</a>
+    <a href="https://voltmoney.in/partner/signup" target="_blank" rel="noopener">LAMF</a>
+    <h6>Client Login</h6>
+    <a href="https://altrumcapital.investwell.app/app/#/login" target="_blank" rel="noopener">MF Portfolio</a>
+    <a href="https://app.voltmoney.in/" target="_blank" rel="noopener">LAMF</a>
+  </div>
+  <a href="contact.html" class="btn btn-primary" style="margin-top:10px;">Book a Consultation</a>
+</div>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-glow-blue" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Calculators</div>
+    <span class="eyebrow">Free Financial Tools</span>
+    <h1>Every calculator you need, in one place.</h1>
+    <p>Model your SIPs, loans, deposits, and retirement goals before you talk to us — every number updates live as you move the sliders.</p>
+  </div>
+</section>
+
+<!-- CALCULATOR HUB -->
+<section class="section-pad" style="padding-top:20px;" id="calcHub">
+  <div class="wrap">
+
+    <div class="calc-tabs">
+      <button class="calc-tab active" data-target="calc-sip">SIP</button>
+      <button class="calc-tab" data-target="calc-stepup">Step-Up SIP</button>
+      <button class="calc-tab" data-target="calc-lumpsum">Lumpsum</button>
+      <button class="calc-tab" data-target="calc-goal">Goal Planner</button>
+      <button class="calc-tab" data-target="calc-emi">EMI</button>
+      <button class="calc-tab" data-target="calc-fd">Fixed Deposit</button>
+      <button class="calc-tab" data-target="calc-rd">Recurring Deposit</button>
+      <button class="calc-tab" data-target="calc-ppf">PPF</button>
+      <button class="calc-tab" data-target="calc-cagr">CAGR</button>
+      <button class="calc-tab" data-target="calc-interest">Simple / Compound</button>
+      <button class="calc-tab" data-target="calc-inflation">Inflation Impact</button>
+      <button class="calc-tab" data-target="calc-retirement">Retirement Corpus</button>
+    </div>
+
+    <!-- 1. SIP -->
+    <div class="calc-panel active" id="calc-sip">
+      <div class="calc-panel-grid">
+        <div class="calc-panel-intro reveal">
+          <span class="eyebrow">Systematic Investment Plan</span>
+          <h3>SIP Calculator</h3>
+          <p>Estimate what a fixed monthly investment could grow into over time, assuming a steady annual return.</p>
+          <ul>
+            <li>Best for salaried investors building long-term wealth</li>
+            <li>Assumes monthly compounding at your expected rate</li>
+            <li>Use it to size a monthly commitment against a goal</li>
+          </ul>
+        </div>
+        <div class="calc-card reveal">
+          <div class="calc-head"><h3>See Your Money Grow</h3><span>SIP Estimator</span></div>
+          <div class="calc-row"><label>Monthly Investment <b id="sip-amount-out">₹10,000</b></label>
+            <input type="range" id="sip-amount" min="1000" max="100000" step="500" value="10000"></div>
+          <div class="calc-row"><label>Investment Period <b id="sip-years-out">15 Years</b></label>
+            <input type="range" id="sip-years" min="1" max="30" step="1" value="15"></div>
+          <div class="calc-row"><label>Expected Annual Return <b id="sip-rate-out">12%</b></label>
+            <input type="range" id="sip-rate" min="6" max="18" step="0.5" value="12"></div>
+          <div class="calc-chart">
+            <svg viewBox="0 0 400 130" preserveAspectRatio="none">
+              <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8871e" stop-opacity="0.45"/><stop offset="100%" stop-color="#e8871e" stop-opacity="0"/></linearGradient></defs>
+              <path class="area-path" fill="url(#g1)" d=""></path>
+              <path class="line-path" fill="none" stroke="#bd8730" stroke-width="2" d=""></path>
+            </svg>
+          </div>
+          <div class="calc-results">
+            <div><span><span class="dot invested"></span>Invested Amount</span><strong id="sip-invested-out">₹0</strong></div>
+            <div><span><span class="dot returns"></span>Estimated Returns</span><strong id="sip-returns-out">₹0</strong></div>
+            <div class="total"><span>Total Value</span><strong id="sip-total-out">₹0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Step-Up SIP -->
+    <div class="calc-panel" id="calc-stepup">
+      <div class="calc-panel-grid">
+        <div class="calc-panel-intro reveal">
+          <span class="eyebrow">Growing Contributions</span>
+          <h3>Step-Up SIP Calculator</h3>
+          <p>Model a SIP where your monthly investment increases every year, in line with your rising income.</p>
+          <ul>
+            <li>Matches contributions to expected salary increments</li>
+            <li>Reaches a larger corpus faster than a flat SIP</li>
+            <li>Useful for early-career investors planning ahead</li>
+          </ul>
+        </div>
+        <div class="calc-card reveal">
+          <div class="calc-head"><h3>Step-Up SIP</h3><span>Annual Increase</span></div>
+          <div class="calc-row"><label>Starting Monthly Investment <b id="step-amount-out">₹10,000</b></label>
+            <input type="range" id="step-amount" min="1000" max="100000" step="500" value="10000"></div>
+          <div class="calc-row"><label>Annual Step-Up <b id="step-percent-out">10%</b></label>
+            <input type="range" id="step-percent" min="0" max="25" step="1" value="10"></div>
+          <div class="calc-row"><label>Investment Period <b id="step-years-out">15 Years</b></label>
+            <input type="range" id="step-years" min="1" max="30" step="1" value="15"></div>
+          <div class="calc-row"><label>Expected Annual Return <b id="step-rate-out">12%</b></label>
+            <input type="range" id="step-rate" min="6" max="18" step="0.5" value="12"></div>
+          <div class="calc-chart">
+            <svg viewBox="0 0 400 130" preserveAspectRatio="none">
+              <defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8871e" stop-opacity="0.45"/><stop offset="100%" stop-color="#e8871e" stop-opacity="0"/></linearGradient></defs>
+              <path class="area-path" fill="url(#g2)" d=""></path>
+              <path class="line-path" fill="none" stroke="#bd8730" stroke-width="2" d=""></path>
+            </svg>
+          </div>
+          <div class="calc-results">
+            <div><span><span class="dot invested"></span>Invested Amount</span><strong id="step-invested-out">₹0</strong></div>
+            <div><span><span class="dot returns"></span>Estimated Returns</span><strong id="step-returns-out">₹0</strong></div>
+            <div class="total"><span>Total Value</span><strong id="step-total-out">₹0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Lumpsum -->
+    <div class="calc-panel" id="calc-lumpsum">
+      <div class="calc-panel-grid">
+        <div class="calc-panel-intro reveal">
+          <span class="eyebrow">One-Time Investment</span>
+          <h3>Lumpsum Calculator</h3>
+          <p>See how a single, one-time investment could grow with annual compounding.</p>
+          <ul>
+            <li>Suited to bonuses, inheritance, or maturity proceeds</li>
+            <li>Assumes annual compounding at your expected rate</li>
+            <li>Compare against SIP to decide how to deploy a windfall</li>
+          </ul>
+        </div>
+        <div class="calc-card reveal">
+          <div class="calc-head"><h3>Lumpsum Growth</h3><span>One-Time</span></div>
+          <div class="calc-row"><label>Investment Amount <b id="lump-amount-out">₹1,00,000</b></label>
+            <input type="range" id="lump-amount" min="10000" max="5000000" step="10000" value="100000"></div>
+          <div class="calc-row"><label>Investment Period <b id="lump-years-out">10 Years</b></label>
+            <input type="range" id="lump-years" min="1" max="30" step="1" value="10"></div>
+          <div class="calc-row"><label>Expected Annual Return <b id="lump-rate-out">12%</b></label>
+            <input type="range" id="lump-rate" min="4" max="20" step="0.5" value="12"></div>
+          <div class="calc-chart">
+            <svg viewBox="0 0 400 130" preserveAspectRatio="none">
+              <defs><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8871e" stop-opacity="0.45"/><stop offset="100%" stop-color="#e8871e" stop-opacity="0"/></linearGradient></defs>
+              <path class="area-path" fill="url(#g3)" d=""></path>
+              <path class="line-path" fill="none" stroke="#bd8730" stroke-width="2" d=""></path>
+            </svg>
+          </div>
+          <div class="calc-results">
+            <div><span><span class="dot invested"></span>Invested Amount</span><strong id="lump-invested-out">₹0</strong></div>
+            <div><span><span class="dot returns"></span>Estimated Returns</span><strong id="lump-returns-out">₹0</strong></div>
+            <div class="total"><span>Total Value</span><strong id="lump-total-out">₹0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Goal-Based SIP -->
+    <div class="calc-panel" id="calc-goal">
+      <div class="calc-panel-grid">
+        <div class="calc-panel-intro reveal">
+          <span class="eyebrow">Reverse-Engineer a Target</span>
+          <h3>Goal-Based SIP Planner</h3>
+          <p>Set a target amount and find out exactly how much you'd need to invest monthly to reach it.</p>
+          <ul>
+            <li>Ideal for a house down-payment, wedding, or education goal</li>
+            <li>Tells you the required monthly SIP, not just the outcome</li>
+            <li>Adjust the timeline to see the trade-off in monthly cost</li>
+          </ul>
+        </div>
+        <div class="calc-card reveal">
+          <div class="calc-head"><h3>Goal Planner</h3><span>Target-Based</span></div>
+          <div class="field-row"><label for="goal-target">Target Amount (₹)</label>
+            <input type="number" id="goal-target" value="5000000" min="0" step="10000"></div>
+          <div class="calc-row"><label>Time to Reach Goal <b id="goal-years-out">10 Years</b></label>
+            <input type="range" id="goal-years" min="1" max="30" step="1" value="10"></div>
+          <div class="calc-row"><label>Expected Annual Return <b id="goal-rate-out">12%</b></label>
+            <input type="range" id="goal-rate" min="6" max="18" step="0.5" value="12"></div>
+          <div class="calc-results">
+            <div class="total"><span>Required Monthly SIP</span><strong id="goal-sip-out">₹0</strong></div>
+            <div><span><span class="dot invested"></span>Total Invested</span><strong id="goal-invested-out">₹0</strong></div>
+            <div><span><span class="dot returns"></span>Estimated Returns</span><strong id="goal-returns-out">₹0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. EMI -->
+    <div class="calc-panel" id="calc-emi">
+      <div class="calc-panel-grid">
+        <div class="calc-panel-intro reveal">
+          <span class="eyebrow">Loan Repayment</span>
+          <h3>EMI Calculator</h3>
+          <p>Work out the monthly instalment on a home, car, or personal loan before you borrow.</p>
+          <ul>
+            <li>Uses the standard reducing-balance EMI formula</li>
+            <li>Shows total interest paid over the loan tenure</li>
+            <li>Helps you compare tenure vs. monthly affordability</li>
+          </ul>
+        </div>
+        <div class="calc-card reveal">
+          <div class="calc-head"><h3>Loan EMI</h3><span>Reducing Balance</span></div>
+          <div class="calc-row"><label>Loan Amount <b id="emi-amount-out">₹25,00,000</b></label>
+            <input type="range" id="emi-amount" min="100000" max="20000000" step="50000" value="2500000"></div>
+          <div class="calc-row"><label>Loan Tenure <b id="emi-years-out">20 Years</b></label>
+            <input type="range" id="emi-years" min="1" max="30" step="1" value="20"></div>
+          <div class="calc-row"><label>Interest Rate <b id="emi-rate-out">8.5%</b></label>
+            <input type="range" id="emi-rate" min="4" max="18" step="0.1" value="8.5"></div>
+          <div class="calc-results">
+            <div class="total"><span>Monthly EMI</span><strong id="emi-monthly-out">₹0</strong></div>
+            <div><span><span class="dot returns"></span>Total Interest</span><strong id="emi-interest-out">₹0</strong></div>
+            <div><span><span class="dot invested"></span>Total Payment</span><strong id="emi-total-out">₹0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. FD -->
+    <div class="calc-panel" id="calc-fd">
+      <div class="calc-panel-grid">
+        <div class="calc-panel-intro reveal">
+          <span class="eyebrow">Bank Fixed Deposit</span>
+          <h3>FD Calculator</h3>
+          <p>Estimate the maturity value of a bank fixed deposit, compounded quarterly as most Indian banks do.</p>
+          <ul>
+            <li>Quarterly compounding, the standard for Indian FDs</li>
+            <li>Good for parking short-to-medium-term goals safely</li>
+            <li>Compare against RD or debt funds for the same tenure</li>
+          </ul>
+        </div>
+        <div class="calc-card reveal">
+          <div class="calc-head"><h3>Fixed Deposit</h3><span>Quarterly Compounding</span></div>
+          <div class="calc-row"><label>Deposit Amount <b id="fd-amount-out">₹1,00,000</b></label>
+            <input type="range" id="fd-amount" min="10000" max="5000000" step="10000" value="100000"></div>
+          <div class="calc-row"><label>Tenure <b id="fd-years-out">5 Years</b></label>
+            <input type="range" id="fd-years" min="1" max="10" step="1" value="5"></div>
+          <div class="calc-row"><label>Interest Rate <b id="fd-rate-out">7%</b></label>
+            <input type="range" id="fd-rate" min="3" max="10" step="0.1" value="7"></div>
+          <div class="calc-results">
+            <div><span><span class="dot invested"></span>Deposit Amount</span><strong id="fd-invested-out">₹0</strong></div>
+            <div><span><span class="dot returns"></span>Interest Earned</span><strong id="fd-returns-out">₹0</strong></div>
+            <div class="total"><span>Maturity Value</span><strong id="fd-total-out">₹0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. RD -->
+    <div class="calc-panel" id="calc-rd">
+      <div class="calc-panel-grid">
+        <div class="calc-panel-intro reveal">
+          <span class="eyebrow">Recurring Deposit</span>
+          <h3>RD Calculator</h3>
+          <p>Estimate the maturity value of a fixed monthly deposit into a bank recurring deposit account.</p>
+          <ul>
+            <li>Disciplined saving with a fixed monthly commitment</li>
+            <li>Lower risk than market-linked instruments</li>
+            <li>Good for short-term goals under 5 years</li>
+          </ul>
+        </div>
+        <div class="calc-card reveal">
+          <div class="calc-head"><h3>Recurring Deposit</h3><span>Monthly Deposit</span></div>
+          <div class="calc-row"><label>Monthly Deposit <b id="rd-amount-out">₹5,000</b></label>
+            <input type="range" id="rd-amount" min="500" max="100000" step="500" value="5000"></div>
+          <div class="calc-row"><label>Tenure <b id="rd-months-out">36 Months</b></label>
+            <input type="range" id="rd-months" min="6" max="120" step="1" value="36"></div>
+          <div class="calc-row"><label>Interest Rate <b id="rd-rate-out">6.5%</b></label>
+            <input type="range" id="rd-rate" min="3" max="10" step="0.1" value="6.5"></div>
+          <div class="calc-results">
+            <div><span><span class="dot invested"></span>Total Deposited</span><strong id="rd-invested-out">₹0</strong></div>
+            <div><span><span class="dot returns"></span>Interest Earned</span><strong id="rd-returns-out">₹0</strong></div>
+            <div class="total"><span>Maturity Value</span><strong id="rd-total-out">₹0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. PPF -->
+    <div class="calc-panel" id="calc-ppf">
+      <div class="calc-panel-grid">
+        <div class="calc-panel-intro reveal">
+          <span class="eyebrow">Public Provident Fund</span>
+          <h3>PPF Calculator</h3>
+          <p>Project the maturity value of yearly PPF contributions, compounded annually.</p>
+          <ul>
+            <li>Government-backed, tax-free under Section 80C</li>
+            <li>Standard lock-in is 15 years, extendable in blocks of 5</li>
+            <li>Rate is government-notified and revised quarterly</li>
+          </ul>
+        </div>
+        <div class="calc-card reveal">
+          <div class="calc-head"><h3>PPF Growth</h3><span>Annual Contribution</span></div>
+          <div class="calc-row"><label>Yearly Investment <b id="ppf-amount-out">₹1,50,000</b></label>
+            <input type="range" id="ppf-amount" min="500" max="150000" step="500" value="150000"></div>
+          <div class="calc-row"><label>Tenure <b id="ppf-years-out">15 Years</b></label>
+            <input type="range" id="ppf-years" min="15" max="40" step="1" value="15"></div>
+          <div class="calc-row"><label>Interest Rate <b id="ppf-rate-out">7.1%</b></label>
+            <input type="range" id="ppf-rate" min="6" max="9" step="0.1" value="7.1"></div>
+          <div class="calc-chart">
+            <svg viewBox="0 0 400 130" preserveAspectRatio="none">
+              <defs><linearGradient id="g4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8871e" stop-opacity="0.45"/><stop offset="100%" stop-color="#e8871e" stop-opacity="0"/></linearGradient></defs>
+              <path class="area-path" fill="url(#g4)" d=""></path>
+              <path class="line-path" fill="none" stroke="#bd8730" stroke-width="2" d=""></path>
+            </svg>
+          </div>
+          <div class="calc-results">
+            <div><span><span class="dot invested"></span>Total Invested</span><strong id="ppf-invested-out">₹0</strong></div>
+            <div><span><span class="dot returns"></span>Interest Earned</span><strong id="ppf-returns-out">₹0</strong></div>
+            <div class="total"><span>Maturity Value</span><strong id="ppf-total-out">₹0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. CAGR -->
+    <div class="calc-panel" id="calc-cagr">
+      <div class="calc-panel-grid">
+        <div class="calc-panel-intro reveal">
+          <span class="eyebrow">Compound Annual Growth Rate</span>
+          <h3>CAGR Calculator</h3>
+          <p>Find the smoothed annual growth rate between an investment's starting and ending value.</p>
+          <ul>
+            <li>Useful for comparing funds or assets on a like-for-like basis</li>
+            <li>Smooths out year-to-year volatility into one figure</li>
+            <li>Not the same as an average annual return</li>
+          </ul>
+        </div>
+        <div class="calc-card reveal">
+          <div class="calc-head"><h3>CAGR</h3><span>Start vs End Value</span></div>
+          <div class="two-col-inputs">
+            <div class="field-row"><label for="cagr-initial">Initial Value (₹)</label>
+              <input type="number" id="cagr-initial" value="100000" min="0" step="1000"></div>
+            <div class="field-row"><label for="cagr-final">Final Value (₹)</label>
+              <input type="number" id="cagr-final" value="250000" min="0" step="1000"></div>
+          </div>
+          <div class="field-row"><label for="cagr-years">Time Period (Years)</label>
+            <input type="number" id="cagr-years" value="7" min="1" step="1"></div>
+          <div class="calc-results">
+            <div class="total"><span>CAGR</span><strong id="cagr-result-out">—</strong></div>
+            <div><span><span class="dot returns"></span>Absolute Gain</span><strong id="cagr-gain-out">—</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. Simple / Compound Interest -->
+    <div class="calc-panel" id="calc-interest">
+      <div class="calc-panel-grid">
+        <div class="calc-panel-intro reveal">
+          <span class="eyebrow">The Basics</span>
+          <h3>Simple vs. Compound Interest</h3>
+          <p>Compare how the same principal grows under simple interest versus compound interest.</p>
+          <ul>
+            <li>See exactly how much compounding adds over time</li>
+            <li>Choose annual, half-yearly, quarterly, or monthly compounding</li>
+            <li>A good teaching tool before bigger investment decisions</li>
+          </ul>
+        </div>
+        <div class="calc-card reveal">
+          <div class="calc-head"><h3>Interest Comparison</h3><span>Simple vs Compound</span></div>
+          <div class="field-row"><label for="int-principal">Principal (₹)</label>
+            <input type="number" id="int-principal" value="100000" min="0" step="1000"></div>
+          <div class="two-col-inputs">
+            <div class="field-row"><label for="int-rate">Annual Rate (%)</label>
+              <input type="number" id="int-rate" value="8" min="0" step="0.1"></div>
+            <div class="field-row"><label for="int-time">Time (Years)</label>
+              <input type="number" id="int-time" value="5" min="0" step="1"></div>
+          </div>
+          <div class="field-row"><label for="int-freq">Compounding Frequency</label>
+            <select id="int-freq">
+              <option value="1">Annually</option>
+              <option value="2">Half-Yearly</option>
+              <option value="4" selected>Quarterly</option>
+              <option value="12">Monthly</option>
+            </select>
+          </div>
+          <div class="calc-results">
+            <div><span><span class="dot invested"></span>Simple Interest Value</span><strong id="int-simple-out">₹0</strong></div>
+            <div><span><span class="dot returns"></span>Compound Interest Value</span><strong id="int-compound-out">₹0</strong></div>
+            <div class="total"><span>Compounding Advantage</span><strong id="int-diff-out">₹0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. Inflation Impact -->
+    <div class="calc-panel" id="calc-inflation">
+      <div class="calc-panel-grid">
+        <div class="calc-panel-intro reveal">
+          <span class="eyebrow">Cost of Living</span>
+          <h3>Inflation Impact Calculator</h3>
+          <p>See what today's cost of something will look like in the future — and what today's money will be worth then.</p>
+          <ul>
+            <li>Helps size goals in future rupees, not today's rupees</li>
+            <li>Shows the real purchasing power erosion over time</li>
+            <li>Pairs well with the Goal Planner above</li>
+          </ul>
+        </div>
+        <div class="calc-card reveal">
+          <div class="calc-head"><h3>Inflation Impact</h3><span>Future Cost</span></div>
+          <div class="field-row"><label for="infl-cost">Current Cost (₹)</label>
+            <input type="number" id="infl-cost" value="50000" min="0" step="1000"></div>
+          <div class="calc-row"><label>Expected Inflation <b id="infl-rate-out">6%</b></label>
+            <input type="range" id="infl-rate" min="2" max="12" step="0.5" value="6"></div>
+          <div class="calc-row"><label>Time Period <b id="infl-years-out">10 Years</b></label>
+            <input type="range" id="infl-years" min="1" max="40" step="1" value="10"></div>
+          <div class="calc-results">
+            <div class="total"><span>Future Cost</span><strong id="infl-future-cost-out">₹0</strong></div>
+            <div><span><span class="dot returns"></span>Today's Money, Future Value</span><strong id="infl-purchasing-power-out">₹0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. Retirement Corpus -->
+    <div class="calc-panel" id="calc-retirement">
+      <div class="calc-panel-grid">
+        <div class="calc-panel-intro reveal">
+          <span class="eyebrow">Long-Term Planning</span>
+          <h3>Retirement Corpus Calculator</h3>
+          <p>Estimate the corpus you'll need at retirement, and the monthly SIP required to build it.</p>
+          <ul>
+            <li>Adjusts today's expenses for inflation up to retirement</li>
+            <li>Accounts for continued growth during retirement itself</li>
+            <li>Gives you a required monthly SIP, not just a target number</li>
+          </ul>
+        </div>
+        <div class="calc-card reveal">
+          <div class="calc-head"><h3>Retirement Planner</h3><span>Corpus &amp; Required SIP</span></div>
+          <div class="two-col-inputs">
+            <div class="calc-row"><label>Current Age <b id="ret-current-age-out">30 yrs</b></label>
+              <input type="range" id="ret-current-age" min="18" max="60" step="1" value="30"></div>
+            <div class="calc-row"><label>Retirement Age <b id="ret-retire-age-out">60 yrs</b></label>
+              <input type="range" id="ret-retire-age" min="45" max="70" step="1" value="60"></div>
+          </div>
+          <div class="field-row"><label for="ret-life-expectancy">Life Expectancy (Age)</label>
+            <input type="number" id="ret-life-expectancy" value="85" min="60" max="100" step="1"></div>
+          <div class="field-row"><label for="ret-monthly-expense">Current Monthly Expenses (₹)</label>
+            <input type="number" id="ret-monthly-expense" value="40000" min="0" step="1000"></div>
+          <div class="two-col-inputs">
+            <div class="calc-row"><label>Inflation <b id="ret-inflation-out">6%</b></label>
+              <input type="range" id="ret-inflation" min="2" max="10" step="0.5" value="6"></div>
+            <div class="calc-row"><label>Pre-Retirement Return <b id="ret-pre-return-out">12%</b></label>
+              <input type="range" id="ret-pre-return" min="6" max="18" step="0.5" value="12"></div>
+          </div>
+          <div class="calc-row"><label>Post-Retirement Return <b id="ret-post-return-out">7%</b></label>
+            <input type="range" id="ret-post-return" min="4" max="12" step="0.5" value="7"></div>
+          <div class="calc-results">
+            <div><span><span class="dot invested"></span>Future Monthly Expense</span><strong id="ret-future-expense-out">₹0</strong></div>
+            <div class="total"><span>Corpus Needed at Retirement</span><strong id="ret-corpus-out">₹0</strong></div>
+            <div><span><span class="dot returns"></span>Required Monthly SIP</span><strong id="ret-monthly-sip-out">₹0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner reveal">
+  <h2>Want an advisor to sanity-check these numbers?</h2>
+  <a href="contact.html" class="btn btn-primary">Book a Free Consultation</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="index.html" class="logo logo-full" aria-label="Altrum Capital — Adding Futures to Your Investments"><img src="images/logo-full.png" alt="Altrum Capital"></a>
+            <p>Independent financial advisory helping families across Hooghly plan, invest, and protect their wealth.</p>
+            <div class="social-row">
+                <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></a>
+                <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9h4v2a4 4 0 0 1 8 0v10h-4v-9a2 2 0 0 0-4 0v9h-4Z"/></svg></a>
+                <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+            </div>
+        </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="services.html">Services</a>
+        <a href="why-us.html">Why Us</a>
+        <a href="process.html">How We Work</a>
+        <a href="testimonials.html">Clients</a>
+        <a href="amcs.html">AMCs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Mutual Funds &amp; SIPs</a>
+        <a href="services.html">Insurance Planning</a>
+        <a href="services.html">Retirement Planning</a>
+        <a href="services.html">Tax-Saving Investments</a>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="calculators.html">SIP Calculator</a>
+        <a href="calculators.html">EMI Calculator</a>
+        <a href="calculators.html">Retirement Calculator</a>
+        <a href="contact.html">Book a Consultation</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. Altrum Capital acts as a distributor and does not guarantee any returns. All calculator results are illustrative estimates only and not a guarantee of actual returns.</p>
+      <p>© <span id="year"></span> Altrum Capital. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/amc-data.js"></script>
+<script src="js/amc-menu.js"></script>
+<script src="js/main.js"></script>
+<script src="js/calculators.js"></script>
+</body>
+</html>

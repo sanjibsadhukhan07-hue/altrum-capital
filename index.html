@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Altrum Capital — Wealth, Grown With Intention</title>
+<meta name="description" content="Altrum Capital is an independent financial advisory based in Hooghly, West Bengal, helping families plan, invest, and protect their wealth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/logo-icon.png">
+</head>
+<body>
+
+<div class="ledger-bg" aria-hidden="true"></div>
+
+<header id="siteHeader">
+  <nav class="wrap">
+      <a href="index.html" class="logo logo-full" aria-label="Altrum Capital — Adding Futures to Your Investments"><img src="images/logo-full.png" alt="Altrum Capital"></a>
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="why-us.html">Why Us</a>
+      <a href="calculators.html">Calculators</a>
+      <div class="nav-item has-mega">
+        <a href="amcs.html" aria-haspopup="true" aria-expanded="false">AMCs <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></a>
+        <div class="mega" data-amc-menu></div>
+      </div>
+      <a href="process.html">How We Work</a>
+      <a href="testimonials.html">Clients</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <div class="login-menu">
+        <button type="button" class="login-btn" aria-haspopup="true" aria-expanded="false">Login <svg viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></button>
+        <div class="login-pop" role="menu">
+          <div class="login-group">
+            <h6>Office Login</h6>
+            <a role="menuitem" href="https://altrumcapital.investwell.app/app/#/login" target="_blank" rel="noopener">Admin</a>
+            <a role="menuitem" href="https://www.nseinvest.com/nsemfdesk/login.htm" target="_blank" rel="noopener">NSE MF</a>
+            <a role="menuitem" href="https://voltmoney.in/partner/signup" target="_blank" rel="noopener">LAMF</a>
+          </div>
+          <div class="login-group">
+            <h6>Client Login</h6>
+            <a role="menuitem" href="https://altrumcapital.investwell.app/app/#/login" target="_blank" rel="noopener">MF Portfolio</a>
+            <a role="menuitem" href="https://app.voltmoney.in/" target="_blank" rel="noopener">LAMF</a>
+          </div>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-sm">Book a Consultation</a>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="menu-close-scrim" id="scrim"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="services.html">Services</a>
+  <a href="why-us.html">Why Us</a>
+  <a href="calculators.html">Calculators</a>
+  <a href="amcs.html">AMCs</a>
+  <a href="process.html">How We Work</a>
+  <a href="testimonials.html">Clients</a>
+  <a href="contact.html">Contact</a>
+  <div class="m-login">
+    <h6>Office Login</h6>
+    <a href="https://altrumcapital.investwell.app/app/#/login" target="_blank" rel="noopener">Admin</a>
+    <a href="https://www.nseinvest.com/nsemfdesk/login.htm" target="_blank" rel="noopener">NSE MF</a>
+    <a href="https://voltmoney.in/partner/signup" target="_blank" rel="noopener">LAMF</a>
+    <h6>Client Login</h6>
+    <a href="https://altrumcapital.investwell.app/app/#/login" target="_blank" rel="noopener">MF Portfolio</a>
+    <a href="https://app.voltmoney.in/" target="_blank" rel="noopener">LAMF</a>
+  </div>
+  <a href="contact.html" class="btn btn-primary" style="margin-top:10px;">Book a Consultation</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-glow-blue" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Independent Financial Advisory · Hooghly, West Bengal</span>
+      <h1>Wealth, grown with <em>intention</em>, not guesswork.</h1>
+      <p class="lead">Altrum Capital helps individuals and families across Hooghly plan, invest, and protect what they've built — with one advisor who actually picks up the phone.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary">Book a Free Consultation</a>
+        <a href="calculators.html" class="btn btn-ghost">Try Our Calculators →</a>
+      </div>
+      <div class="hero-note">
+        <div class="avatars"><span></span><span></span><span></span><span></span></div>
+        <span>Trusted by families across Hooghly, Chinsurah &amp; Chandannagar</span>
+      </div>
+    </div>
+
+    <div class="calc-card" id="calculator">
+      <div class="calc-head">
+        <h3>See Your Money Grow</h3>
+        <span>SIP Estimator</span>
+      </div>
+
+      <div class="calc-row">
+        <label>Monthly Investment <b id="pAmt">₹10,000</b></label>
+        <input type="range" id="pSlider" min="1000" max="100000" step="500" value="10000">
+      </div>
+      <div class="calc-row">
+        <label>Investment Period <b id="nAmt">15 Years</b></label>
+        <input type="range" id="nSlider" min="1" max="30" step="1" value="15">
+      </div>
+      <div class="calc-row">
+        <label>Expected Annual Return <b id="rAmt">12%</b></label>
+        <input type="range" id="rSlider" min="6" max="18" step="0.5" value="12">
+      </div>
+
+      <div class="calc-chart">
+        <svg id="calcSvg" viewBox="0 0 400 130" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#e8871e" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#e8871e" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path class="area-path" fill="url(#areaGrad)" d=""></path>
+          <path class="line-path" fill="none" stroke="#bd8730" stroke-width="2" d=""></path>
+        </svg>
+      </div>
+
+      <div class="calc-results">
+        <div><span><span class="dot invested"></span>Invested Amount</span> <strong id="investedOut">₹0</strong></div>
+        <div><span><span class="dot returns"></span>Estimated Returns</span> <strong id="returnsOut">₹0</strong></div>
+        <div class="total"><span>Total Value</span> <strong id="totalOut">₹0</strong></div>
+      </div>
+      <p style="margin-top:16px;"><a href="calculators.html" class="mono" style="font-size:12.5px;color:var(--orange-400);">See 12 more calculators →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat reveal"><h3 class="mono" data-target="15" data-suffix="+">0</h3><p>Years Guiding Investors</p></div>
+    <div class="stat reveal"><h3 class="mono" data-target="250" data-prefix="₹" data-suffix=" Cr+">0</h3><p>Assets Under Advisory</p></div>
+    <div class="stat reveal"><h3 class="mono" data-target="1200" data-suffix="+">0</h3><p>Families Served</p></div>
+    <div class="stat reveal"><h3 class="mono" data-target="6">0</h3><p>Core Planning Services</p></div>
+  </div>
+</section>
+
+<!-- MOVING IMAGE GALLERY (auto-advances every 4 seconds) -->
+<section class="img-slider-section" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Life We Help You Plan For</span>
+      <h2>A glimpse of what intentional wealth looks like.</h2>
+      <p>From the first conversation to the goals you're working toward — a look at the life your plan is built around.</p>
+    </div>
+    <div class="img-slider reveal">
+      <div class="slider-track-time"></div>
+      <div class="img-slide active">
+        <img src="https://picsum.photos/seed/altrum-family/1200/700" alt="A family reviewing their financial plan together">
+        <div class="slide-caption"><span>Retirement Planning</span><h3>Plan for the years you've earned.</h3></div>
+      </div>
+      <div class="img-slide">
+        <img src="https://picsum.photos/seed/altrum-invest/1200/700" alt="Reviewing investment portfolio documents">
+        <div class="slide-caption"><span>Mutual Funds &amp; SIPs</span><h3>Steady, disciplined investing.</h3></div>
+      </div>
+      <div class="img-slide">
+        <img src="https://picsum.photos/seed/altrum-home/1200/700" alt="A young family in front of their new home">
+        <div class="slide-caption"><span>Goal-Based Planning</span><h3>A home, an education, a future.</h3></div>
+      </div>
+      <div class="img-slide">
+        <img src="https://picsum.photos/seed/altrum-meeting/1200/700" alt="Advisor meeting with a client over documents">
+        <div class="slide-caption"><span>One Advisor, One Relationship</span><h3>Someone who picks up the phone.</h3></div>
+      </div>
+      <div class="img-slide">
+        <img src="https://picsum.photos/seed/altrum-coast/1200/700" alt="A relaxed retired couple enjoying the outdoors">
+        <div class="slide-caption"><span>Life After Work</span><h3>Retirement, funded and unhurried.</h3></div>
+      </div>
+      <div class="slider-dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner reveal">
+  <h2>Ready to see where your money actually stands?</h2>
+  <a href="contact.html" class="btn btn-primary">Book a Free Consultation</a>
+</div>
+
+<!-- AMC LOGO STRIP -->
+<section class="amc-strip" aria-label="AMCs we work with">
+  <div class="wrap">
+    <div class="amc-strip-head">
+      <span class="eyebrow">Our Partners</span>
+      <h2>AMCs we are closely working with</h2>
+    </div>
+  </div>
+  <div class="amc-marquee" data-amc-marquee></div>
+  <div class="wrap"><p class="amc-strip-cta"><a href="amcs.html" class="mono">View all AMCs →</a></p></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="index.html" class="logo logo-full" aria-label="Altrum Capital — Adding Futures to Your Investments"><img src="images/logo-full.png" alt="Altrum Capital"></a>
+            <p>Independent financial advisory helping families across Hooghly plan, invest, and protect their wealth.</p>
+            <div class="social-row">
+                <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></a>
+                <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9h4v2a4 4 0 0 1 8 0v10h-4v-9a2 2 0 0 0-4 0v9h-4Z"/></svg></a>
+                <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+            </div>
+        </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="services.html">Services</a>
+        <a href="why-us.html">Why Us</a>
+        <a href="process.html">How We Work</a>
+        <a href="testimonials.html">Clients</a>
+        <a href="amcs.html">AMCs</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Mutual Funds &amp; SIPs</a>
+        <a href="services.html">Insurance Planning</a>
+        <a href="services.html">Retirement Planning</a>
+        <a href="services.html">Tax-Saving Investments</a>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <a href="calculators.html">SIP Calculator</a>
+        <a href="calculators.html">EMI Calculator</a>
+        <a href="calculators.html">Retirement Calculator</a>
+        <a href="contact.html">Book a Consultation</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future returns. Altrum Capital acts as a distributor and does not guarantee any returns.</p>
+      <p>© <span id="year"></span> Altrum Capital. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/amc-data.js"></script>
+<script src="js/amc-menu.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // hero SIP mini-calculator (shared formula pattern with calculators.js)
+  const pSlider = document.getElementById('pSlider');
+  const nSlider = document.getElementById('nSlider');
+  const rSlider = document.getElementById('rSlider');
+  const pAmt = document.getElementById('pAmt');
+  const nAmt = document.getElementById('nAmt');
+  const rAmt = document.getElementById('rAmt');
+  const investedOut = document.getElementById('investedOut');
+  const returnsOut = document.getElementById('returnsOut');
+  const totalOut = document.getElementById('totalOut');
+  const calcSvg = document.getElementById('calcSvg');
+
+  function fmt(n){ return '₹' + Math.round(n).toLocaleString('en-IN'); }
+  function futureValue(P, months, annualRatePct){
+    const i = annualRatePct / 12 / 100;
+    if(months === 0) return 0;
+    return P * ((Math.pow(1 + i, months) - 1) / i) * (1 + i);
+  }
+  function renderCalculator(){
+    const P = +pSlider.value, years = +nSlider.value, rate = +rSlider.value;
+    pAmt.textContent = '₹' + P.toLocaleString('en-IN');
+    nAmt.textContent = years + (years === 1 ? ' Year' : ' Years');
+    rAmt.textContent = rate + '%';
+    const totalMonths = years * 12;
+    const total = futureValue(P, totalMonths, rate);
+    const invested = P * totalMonths;
+    const returns = total - invested;
+    investedOut.textContent = fmt(invested);
+    returnsOut.textContent = fmt(returns);
+    totalOut.textContent = fmt(total);
+    const points = [];
+    for(let y = 0; y <= years; y++) points.push(futureValue(P, y * 12, rate));
+    const max = Math.max(...points, 1);
+    const w = 400, h = 130, pad = 6;
+    const stepX = years === 0 ? 0 : w / years;
+    let linePoints = points.map((v, idx) => [idx * stepX, h - pad - (v / max) * (h - pad * 2)]);
+    let lineD = 'M' + linePoints.map(pt => pt.join(',')).join(' L');
+    let areaD = lineD + ` L${w},${h} L0,${h} Z`;
+    calcSvg.querySelector('.line-path').setAttribute('d', lineD);
+    calcSvg.querySelector('.area-path').setAttribute('d', areaD);
+  }
+  [pSlider, nSlider, rSlider].forEach(s => s.addEventListener('input', renderCalculator));
+  renderCalculator();
+</script>
+
+</body>
+</html>
