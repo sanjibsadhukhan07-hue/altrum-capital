@@ -778,6 +778,7 @@ section{ position:relative; z-index:1; }
 /* ---------- cta banner ---------- */
 .cta-banner{
   margin:0 32px;
+  margin-bottom:80px;
   max-width:calc(1800px - 2*clamp(24px,3vw,64px)); width:calc(100% - 2*clamp(24px,3vw,64px));
   margin-left:auto; margin-right:auto;
   background:linear-gradient(120deg, var(--navy-850), var(--navy-800));
@@ -802,7 +803,8 @@ section{ position:relative; z-index:1; }
 }
 .cta-banner h2{ font-size:clamp(24px,2.8vw,32px); max-width:460px; position:relative; z-index:1;}
 .cta-banner .btn{ position:relative; z-index:1; flex-shrink:0; }
-
+.cta-banner + .amc-strip{ padding-top:0; }
+@media (max-width:640px){ .cta-banner{ margin-bottom:56px; } }
 /* ---------- footer ---------- */
 footer{
   padding:70px 0 30px;

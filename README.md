@@ -22,6 +22,8 @@ amcs.html             List of all AMCs
 amc.html              ONE page for every AMC — loads content by ?amc=<slug>
 
 css/style.css         All styling (colours are variables at the top)
+js/header.js          Shared header + mobile menu (included on every page)
+js/footer.js          Shared footer (included on every page)
 js/main.js            Menu, scroll effects, Login dropdown
 js/calculators.js     Calculators
 js/amc-data.js        List of AMCs (slug, name, short name, website domain)
@@ -33,6 +35,22 @@ images/logo-full.png  Full Altrum logo (header and footer)
 images/logo-icon.png  Icon only
 images/amc/           AMC logos, named <slug>.png
 ```
+
+## Shared header and footer
+
+The header (logo, menu, Login dropdown, mobile menu) lives only in `js/header.js`, and the footer only in `js/footer.js`. Every page just contains:
+
+```html
+<script src="js/header.js"></script>   <!-- where the header goes -->
+...
+<script src="js/footer.js"></script>   <!-- where the footer goes -->
+```
+
+Change a menu item, login link, footer link or logo **once** in these two files and all pages update. The current page is highlighted in the menu automatically.
+
+- **Extra footer line for one page:** `<script src="js/footer.js" data-note="Your extra text."></script>` (the Calculators page uses this for its disclaimer).
+- **Clean URLs (no `.html`):** at the top of both files, set `var CLEAN_URLS = true;` — but only after your host serves pages without `.html`, otherwise the links will break.
+- Because they are scripts, keep the two `<script>` tags above on any new page, and load them **before** `amc-menu.js` and `main.js`.
 
 ## How the AMC page works
 
@@ -66,7 +84,7 @@ Currently without a logo file: `360onemf, abakkusmf, alphagrepmf, dspmf, heliosm
 
 ## Login menu
 
-The header **Login** dropdown is repeated in the header of each page (and in the mobile menu). To change a link, search for the URL in the HTML files and replace it everywhere.
+The header **Login** dropdown (and the same links in the mobile menu) is defined once in `js/header.js`. To change a link, edit it there.
 
 | Group | Item | Link |
 |---|---|---|
@@ -91,9 +109,10 @@ Content width is the `.wrap` rule (`max-width:1800px`). Lower it for narrower pa
 
 ## Logo
 
-The header and footer use `images/logo-full.png` (the `logo-full` class). Change its size with the `height` values in the "Full logo" block at the end of `css/style.css`.
+The header and footer (`js/header.js`, `js/footer.js`) use `images/logo-full.png` (the `logo-full` class). Change its size with the `height` values in the "Full logo" block at the end of `css/style.css`.
 
 ## Notes
 - AMC icons for the fallback come from Google's favicon service, so visitors need an internet connection to see them.
+- The header and footer are added by JavaScript, so they appear only when JavaScript is on (true for virtually all visitors).
 - Old per-AMC pages (for example `hdfcmf.html`) no longer exist; links must use `amc.html?amc=<slug>`.
 - Check each AMC's ARN number in `js/amc-content.js` — some entries share the same value.

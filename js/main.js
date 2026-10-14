@@ -135,7 +135,7 @@ document.querySelectorAll('.login-menu').forEach(menu => {
   const btn = menu.querySelector('.login-btn');
   let timer;
   const set = open => { menu.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); };
-  btn.addEventListener('click', e => { e.stopPropagation(); set(!menu.classList.contains('open')); });
+  btn.addEventListener('click', e => { e.stopPropagation(); const canHover = window.matchMedia('(hover:hover)').matches; set(canHover ? true : !menu.classList.contains('open')); });
   menu.addEventListener('mouseenter', () => { if (window.matchMedia('(hover:hover)').matches){ clearTimeout(timer); set(true); } });
   menu.addEventListener('mouseleave', () => { timer = setTimeout(() => set(false), 160); });
   menu.addEventListener('focusout', e => { if (!menu.contains(e.relatedTarget)) set(false); });
