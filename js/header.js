@@ -4,7 +4,7 @@
 (function(){
   // ---- one place to switch URL style -------------------------------------------
   // false -> services.html      true -> /services   (only after your host serves clean URLs)
-  var CLEAN_URLS = false;
+  var CLEAN_URLS = true;
   // -------------------------------------------------------------------------------
   function url(name){
     if (name === 'index') return CLEAN_URLS ? '/' : 'index.html';
